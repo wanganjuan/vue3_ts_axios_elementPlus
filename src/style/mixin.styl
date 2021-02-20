@@ -1,0 +1,65 @@
+/**
+ * NO-WRAP
+ */
+no-wrap()
+  text-overflow: ellipsis
+  overflow: hidden
+  white-space: nowrap
+
+/**
+ * MODEL
+ * @param mix $w width
+ * @param mix $h height
+ * @param mix $m margin
+ * @param mix $p padding
+ * @param int $f float
+ * @param int $o overflow
+ */
+model($w = none, $h = none, $m = none, $p = none, $f = -1, $o = -1)
+	if $w != none
+		width: $w
+	if $h != none
+		height: $h
+	if $p != none
+		padding: $p
+	if $m != none
+		margin: $m
+	if $o == 0
+		overflow: hidden
+	else if $o == 1
+		overflow: visible
+	else if $o == 2
+		overflow-y: scroll
+	else if $o == 3
+		overflow-y: auto
+	if $f == 0
+		float: none
+	else if $f == 1
+		float: left
+	else if $f == 2
+		float: right
+
+/**
+ * POSITION
+ * @param mix $t top
+ * @param mix $r right
+ * @param mix $b bottom
+ * @param mix $l left
+ * @param int $p position
+ * @param int $z z-index
+ */
+pos($t = none, $r = none, $b = none, $l = none, $p = 1, $z = 0)
+	if $p > 0
+		position: absolute
+	else if $p == 0
+		position: fixed
+	if $t != none
+		top: $t
+	if $r != none
+		right: $r
+	if $b != none
+		bottom: $b
+	if $l != none
+		left: $l
+	if $z > 0
+		z-index: $z

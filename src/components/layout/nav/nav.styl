@@ -1,0 +1,50 @@
+$check-color = #ffffff
+$default-color = rgba(255,255,255,.85)
+$child-color = rgba(255,255,255,.65)
+border-4px()
+  &:hover
+    background:rgba(255,255,255,0.05);
+    color $check-color
+  &.active-route
+    background:rgba(255,255,255,0.05);
+    color $check-color
+    &::before
+      content ''
+      width:4px;
+      height:48px;
+      position absolute
+      left 0
+      background:linear-gradient(180deg,rgba(46,247,208,1) 0%,rgba(66,175,243,1) 100%);
+border-4px-parent()
+  &.active-route-parent
+    background:rgba(255,255,255,0.05);
+    color $check-color
+    &::before
+      content ''
+      width:4px;
+      height:48px;
+      position absolute
+      left 0
+      background:linear-gradient(180deg,rgba(46,247,208,1) 0%,rgba(66,175,243,1) 100%);
+border-4px-none()
+  .nav-ul .nav-li.active-route-parent
+    background transparent 
+    color $default-color
+    &::before
+      content ''
+      display none
+li-desc()
+  height 48px
+  line-height 48px
+  overflow hidden
+  color $default-color
+  white-space nowrap
+  cursor pointer
+  position relative
+  user-select none
+icon-desc()
+  display inline-block
+  width 64px
+  font-size:16px;
+  text-align center
+  transition all 0.2s ease
