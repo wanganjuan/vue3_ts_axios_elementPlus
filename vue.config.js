@@ -110,11 +110,6 @@ module.exports = {
         automaticNameDelimiter: '-',
         name: true,
         cacheGroups: {
-          lodash: {
-            name: 'lodash',
-            test: /[\\/]node_modules[\\/]lodash[\\/]/,
-            priority: 20
-          },
           vue: {
             name: 'vue',
             test: /[\\/]node_modules[\\/]vue[\\/]/
