@@ -78,12 +78,12 @@ module.exports = {
     port: 8085,
     proxy: {
       '/api/': {
-        target: 'http://172.31.164.23:3000/',
+        target: 'http://172.31.164.23:3000/'
         // pathRewrite: {
         //   '^/api/': ''
         // }
       }
-    },
+    }
   },
   pluginOptions: {
     'style-resources-loader': {
@@ -133,8 +133,7 @@ module.exports = {
   chainWebpack: config => {
     config.resolve.symlinks(true)
     // 添加别名
-    config.resolve.alias
-      .set('@', resolve('src'))
+    config.resolve.alias.set('@', resolve('src'))
 
     if (process.env.use_analyzer) {
       config.plugin('webpack-bundle-analyzer').use(BundleAnalyzerPlugin)

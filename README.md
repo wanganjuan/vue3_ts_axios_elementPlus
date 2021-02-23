@@ -12,6 +12,7 @@
 | Vue3.0 源码学习 | <a href="https://vue3js.cn/start/" target="_blank">链接</a> |
 | Vue-Router 官方文档 | <a href="https://next.router.vuejs.org/" target="_blank">链接</a> |
 | Vuex4.0 | <a href="https://github.com/vuejs/vuex/tree/4.0/" target="_blank">Github</a> |
+| element-plus | <a href="https://element-plus.org/#/zh-CN" target="_blank">链接</a> |
 
 #### 主要用到的库
 

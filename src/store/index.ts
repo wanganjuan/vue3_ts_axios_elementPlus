@@ -1,10 +1,10 @@
 import { createStore } from 'vuex'
 interface DemoState {
-  count: number;
+  count: number
 }
 const state: DemoState = {
   count: 0
-};
+}
 // Create a new store instance.
 const store = createStore({
   state,
@@ -12,7 +12,7 @@ const store = createStore({
     count: () => state.count
   },
   mutations: {
-    increment (state) {
+    increment(state) {
       state.count++
     }
   }

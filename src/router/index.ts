@@ -1,14 +1,11 @@
-import {
-  RouteRecordRaw,
-  createRouter,
-  createWebHistory,
-} from 'vue-router'
+import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router'
 import { store } from '@/store/store'
-const Home = () => import(/* webpackChunkName: "layout" */ "../views/Home.vue");
-const Layout = () => import(/* webpackChunkName: "Login" */ "@/components/layout/main-layout.vue");
-const Login = () => import(/* webpackChunkName: "Login" */ "../views/Login.vue");
+const Home = () => import(/* webpackChunkName: "layout" */ '../views/Home.vue')
+const Layout = () =>
+  import(/* webpackChunkName: "Login" */ '@/components/layout/main-layout.vue')
+const Login = () => import(/* webpackChunkName: "Login" */ '../views/Login.vue')
 
-const routes:Array<RouteRecordRaw> = [
+const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     redirect: '/main/home'
@@ -16,11 +13,13 @@ const routes:Array<RouteRecordRaw> = [
   {
     path: '/main',
     component: Layout,
-    children: [{
-      path: 'home',
-      name: 'Home',
-      component: Home
-    }]
+    children: [
+      {
+        path: 'home',
+        name: 'Home',
+        component: Home
+      }
+    ]
   },
   {
     path: '/login',
